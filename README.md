@@ -1,6 +1,8 @@
 # SHRS — Safety Hazard Reporting System
 
-**See something. Say something. Submit it here.**
+*Sanitized snapshot of my private repository (20 commits, Apr to Aug 2026), published Aug 2026 as a code sample. Provisioning scripts were left out, and it contains no client data or secrets.*
+
+**Plant-floor workers report hazards from their phones. The safety team assigns and tracks each one on a realtime dashboard.**
 
 [**Live demo →**](https://shrs.autoriseconsulting.com/autorise) · part of a multi-tenant suite built for small and mid-market operations teams
 
@@ -8,15 +10,15 @@
 
 ## The problem
 
-Most plant hazard reporting runs on paper forms that reach a safety manager days later,
-by which point the hazard is either resolved or has caused an injury. Reporting friction is the
-single biggest determinant of whether near-misses get captured at all.
+In many plants, hazard reporting still runs on paper forms that can take days to reach a
+safety manager, by which point the hazard is either resolved or has caused an injury. When a
+report is slow to file, near-misses often go unreported.
 
 ## What it does
 
-- **Photo-first capture on mobile** — camera opens directly; a hazard is reported in under 30 seconds
+- **Photo-first capture on mobile** — the camera opens straight from the report form
 - **Hazard type and severity grid** — large tap targets chosen for gloved hands, not mouse precision
-- **Realtime safety dashboard** — new reports appear with a toast, no refresh
+- **Realtime safety dashboard** — new reports appear without a refresh
 - **Assignment and status workflow** — route a report to a specific safety team member and track it to closure
 - **Analytics** — trend charts by type, severity and area to surface the pattern behind repeat reports
 - **PDF and CSV export** — for audits and safety committee meetings
@@ -83,6 +85,8 @@ npm run dev
 ```
 
 Apply the SQL in `supabase/` to your own project first, then visit `/your-company-slug`.
+The schema builds on the `companies` and `managers` tables shared with SRTS, which this
+repo does not create.
 
 ```bash
 npm run build     # production build
